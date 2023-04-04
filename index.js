@@ -2,7 +2,7 @@ const renderUserId = document.querySelector("#renderUserId")
 const catchError = document.querySelector("#error")
 
   //Posting data to the server
-  function submitData(inputName, inputEmail){
+  function submitData(inputName,inputEmail ){
     return fetch("http://localhost:3000/users", {
     method: "POST",
     headers: {
@@ -22,4 +22,6 @@ const catchError = document.querySelector("#error")
         catchError.textContent = error.message;
         console.log(error.message);
     });
-};
+}; 
+submitData("Samuel","Samuel.com");
+module.exports = submitData
